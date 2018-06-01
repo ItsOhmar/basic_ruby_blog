@@ -1,0 +1,11 @@
+<h1 class="big-header">Latest Posts</h1>
+<hr />
+
+<% @posts.each do |post| %>
+  <div class="post-rots">
+    <h2><%= post.title%></h2>
+    <div><%= truncate(post.body, :length => 255) %></div>
+    <br>
+    <%= link_to "Read Post", post %>
+</div>
+<% end %>
